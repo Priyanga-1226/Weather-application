@@ -1,38 +1,186 @@
+/* Basic reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for the entire app */
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
+  padding: 20px;
+  background-color: #eb7681;
+  height: 90vh; 
+  width: 50%; 
+  color: #fff;
+  margin: 30px auto;
+  max-width: 600px; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header styling */
+.app-name {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Search bar styling */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.city-search {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #333;
+}
+
+.city-search:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+/* Submit button styling */
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #697786;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #242f3b;
+}
+
+/* Loader styling */
+.Oval {
+  display: block;
+  margin: 20px auto;
+}
+
+/* Error message styling */
+.error-message {
+  color: #dc3545;
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+/* Weather details styling */
+.weather-container {
+  background-color: rgba(88, 87, 87, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 100%; /* Full width for responsiveness */
+  margin: 20px auto;
+  color: #fff;
+}
+
+.city-name h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.icon-temp {
+  margin-bottom: 20px;
+}
+
+.icon-temp img {
+  width: 80px; /* Smaller size for responsiveness */
+  height: 80px;
+}
+
+.deg {
+  font-size: 1.5em;
+}
+
+.des-wind p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .app-name {
+    font-size: 2em;
+  }
+
+  .city-search {
+    font-size: 0.9em;
+  }
+
+  .submit-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .weather-container {
+    padding: 15px;
+  }
+
+  .city-name h2 {
+    font-size: 1.8em;
+  }
+
+  .date {
+    font-size: 1em;
+  }
+
+  .icon-temp img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .deg {
+    font-size: 1.3em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  .app-name {
+    font-size: 1.5em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .city-search {
+    font-size: 0.8em;
+  }
+
+  .submit-button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+
+  .weather-container {
+    padding: 10px;
+  }
+
+  .city-name h2 {
+    font-size: 1.6em;
+  }
+
+  .date {
+    font-size: 0.9em;
+  }
+
+  .icon-temp img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .deg {
+    font-size: 1.2em;
   }
 }
